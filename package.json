@@ -6,7 +6,9 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "serialize-javascript": "^2.1.1",
+    "webpack-dev-server": "^3.1.11"
   },
   "scripts": {
     "start": "react-scripts start",
