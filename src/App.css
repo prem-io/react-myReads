@@ -13,6 +13,12 @@ body,
   background: white;
 }
 
+.app-container {
+  width: 100%;
+  height: calc(100vh - 68px);
+  padding: 30px;
+}
+
 /* main page */
 
 .list-books-title {
@@ -28,7 +34,8 @@ body,
 }
 
 .list-books {
-  padding: 30px;
+  width: 100%;
+  height: 100%;
 }
 
 .list-books-content {
@@ -123,11 +130,6 @@ body,
   margin-right: 30px;
 }
 
-button:active {
-  border: red;
-  outline: none;
-}
-
 .search-books-results {
   padding: 30px;
 }
@@ -136,28 +138,9 @@ button:active {
 
 .books-grid {
   list-style-type: none;
-  padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-}
-
-/* x-scrollbar style */
-
-.scrollX {
-  flex-wrap: nowrap;
-  overflow-x: auto;
-}
-
-.scrollX::-webkit-scrollbar {
-  height: 5px;
-  background-color: transparent;
-}
-
-.scrollX::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background-color: #bdc3c7;
 }
 
 .books-grid li {
@@ -225,14 +208,15 @@ button:active {
 }
 
 /* loader */
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
 
 .loader {
-  position: absolute;
-  top: 45%;
-  left: 45%;
-  -ms-transform: translateX(-45%) translateY(-45%);
-  -webkit-transform: translate(-45%, -45%);
-  transform: translate(-45%, -45%);
   border: 10px solid #f3f3f3;
   border-top: 10px solid #1abc9c;
   border-radius: 50%;

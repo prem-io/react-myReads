@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Redirect } from 'react-router-dom'
 import './App.css'
 import ShelvesLayout from './components/ShelvesLayout'
 import SearchLayout from './components/SearchLayout'
@@ -11,8 +11,11 @@ class App extends React.Component {
       <BrowserRouter>
         <div className="app">
           <AppHeader />
-          <Route exact path='/' component={ShelvesLayout} />
-          <Route path='/search' component={SearchLayout} />
+          <div className="app-container">
+            <Route exact path="/" render={() => <Redirect to="/books" />} />
+            <Route path='/books' component={ShelvesLayout} />
+            <Route path='/search' component={SearchLayout} />
+          </div>
         </div>
       </BrowserRouter>
     )

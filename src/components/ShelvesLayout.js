@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import * as BooksAPI from '../BooksAPI'
 import Shelf from './Shelf'
 import { Link } from 'react-router-dom'
+import Loader from './Loader'
 class ShelvesLayout extends Component {
   state = {
     books: []
@@ -46,7 +47,7 @@ class ShelvesLayout extends Component {
               />
             ))}
           </div>
-          : <div class="loader"></div>
+          : <Loader />
         }
         <Link to='/search' className="open-search" >Add a book</Link>
       </div>
