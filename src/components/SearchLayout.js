@@ -48,7 +48,7 @@ class SearchLayout extends Component {
             ))}
           </ol>
         </div>
-        {resultsFound ? <div>No Results</div> : null}
+        {resultsFound ? <div className="search-books-no-results">No Results</div> : null}
       </div>
     )
   }
