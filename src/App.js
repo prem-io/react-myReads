@@ -39,9 +39,8 @@ class App extends React.Component {
         <div className="app">
           <AppHeader />
           <div className="app-container">
-            <Route exact path="/" render={() => <Redirect to="/books" />} />
             <Route
-              path='/books'
+              exact path="/"
               render={() => (
                 <ShelvesLayout
                   books={books}
@@ -58,6 +57,7 @@ class App extends React.Component {
                 />
               )}
             />
+            <Redirect fro="*" to="/" />
           </div>
         </div>
       </BrowserRouter>
