@@ -2,7 +2,8 @@ import React from 'react'
 // import PropTypes from 'prop-types'
 
 const Book = ({ book, updateShelf }) => {
-  const { title, authors, imageLinks, shelf } = book
+  const { title, authors, imageLinks, shelf = 'none' } = book
+
   return (
     <div className="book">
       <div className="book-top">
@@ -10,7 +11,7 @@ const Book = ({ book, updateShelf }) => {
           style={{ width: 128, height: 193, backgroundImage: `url(${imageLinks.thumbnail})` }}
         ></div>
         <div className="book-shelf-changer">
-          <select defaultValue={shelf} onChange={(e) => updateShelf(book, shelf, e.target.value)}>
+          <select defaultValue={shelf} onChange={(e) => updateShelf(book, e.target.value)}>
             <option value="move" disabled>Move to...</option>
             <option value="currentlyReading">Currently Reading</option>
             <option value="wantToRead">Want to Read</option>

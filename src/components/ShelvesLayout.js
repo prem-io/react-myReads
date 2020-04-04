@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import * as BooksAPI from '../BooksAPI'
 import Shelf from './Shelf'
 import { Link } from 'react-router-dom'
-export class ShelvesLayout extends Component {
+class ShelvesLayout extends Component {
   state = {
     books: []
   }
@@ -14,9 +14,7 @@ export class ShelvesLayout extends Component {
       })
   }
 
-  updateShelf = (book, prevShelf, shelf) => {
-    console.log(book)
-    console.log(prevShelf, '---->', shelf)
+  updateShelf = (book, shelf) => {
 
     this.setState((prevState) => ({
       books: prevState.books.map(b => b.id === book.id ? { ...b, shelf } : b)
@@ -37,9 +35,6 @@ export class ShelvesLayout extends Component {
 
     return (
       <div className="list-books">
-        <div className="list-books-title">
-          <h1>MyReads</h1>
-        </div>
         {(Array.isArray(books) && books.length > 0)
           ? <div className="list-books-content">
             {shelves.map(s => (
@@ -53,7 +48,6 @@ export class ShelvesLayout extends Component {
           </div>
           : <div>Loading...</div>
         }
-
         <Link to='/search' className="open-search" >Add a book</Link>
       </div>
     )
