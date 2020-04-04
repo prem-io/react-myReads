@@ -46,7 +46,7 @@ class ShelvesLayout extends Component {
               />
             ))}
           </div>
-          : <div>Loading...</div>
+          : <div class="loader"></div>
         }
         <Link to='/search' className="open-search" >Add a book</Link>
       </div>

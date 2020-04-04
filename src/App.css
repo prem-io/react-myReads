@@ -17,7 +17,7 @@ body,
 
 .list-books-title {
   padding: 10px 0;
-  background: #2e7c31;
+  background: #1abc9c;
   text-align: center;
 }
 
@@ -25,6 +25,10 @@ body,
   font-weight: 400;
   margin: 0;
   color: white;
+}
+
+.list-books {
+  padding: 30px;
 }
 
 .list-books-content {
@@ -61,7 +65,7 @@ body,
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #2e7d32;
+  background: #1abc9c;
   background-image: url('./icons/add.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -72,7 +76,7 @@ body,
 }
 
 .open-search:hover {
-  background-color: rgb(0, 102, 0);
+  background-color: #16a085;
 }
 
 /* search page */
@@ -139,6 +143,23 @@ button:active {
   flex-wrap: wrap;
 }
 
+/* x-scrollbar style */
+
+.scrollX {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.scrollX::-webkit-scrollbar {
+  height: 5px;
+  background-color: transparent;
+}
+
+.scrollX::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #bdc3c7;
+}
+
 .books-grid li {
   padding: 10px 15px;
   text-align: left;
@@ -175,7 +196,7 @@ button:active {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #60ac5d;
+  background: #16a085;
   background-image: url('./icons/arrow-drop-down.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -201,4 +222,31 @@ button:active {
   padding: 20px 10px 0;
   text-align: center;
   font-size: 0.8em;
+}
+
+/* loader */
+
+.loader {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  -ms-transform: translateX(-45%) translateY(-45%);
+  -webkit-transform: translate(-45%, -45%);
+  transform: translate(-45%, -45%);
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #1abc9c;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  margin: 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
