@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 const SelectMenu = ({ shelf, book, updateShelf }) => {
   return (
     <div className="book-shelf-changer">
-      <select defaultValue={shelf} onChange={(e) => updateShelf(book, e.target.value)}>
+      <select defaultValue={shelf} onChange={(e) => updateShelf(book, e.target.value, shelf)}>
         <option value="move" disabled>Move to...</option>
         <option value="currentlyReading">Currently Reading</option>
         <option value="wantToRead">Want to Read</option>
