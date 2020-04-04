@@ -1,29 +1,15 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
-import * as BooksAPI from './BooksAPI'
 import './App.css'
 import ShelvesLayout from './components/ShelvesLayout'
 import SearchLayout from './components/SearchLayout'
 
-class BooksApp extends React.Component {
-  state = {
-    books: []
-  }
-
-  componentDidMount() {
-    BooksAPI.getAll()
-      .then((books) => {
-        this.setState(() => ({ books }))
-      })
-  }
-
+class App extends React.Component {
   render() {
-    console.log(this.state.books)
-
     return (
       <BrowserRouter>
         <div className="app">
-          <Route path='/' component={ShelvesLayout} />
+          <Route exact path='/' component={ShelvesLayout} />
           <Route path='/search' component={SearchLayout} />
         </div>
       </BrowserRouter>
@@ -31,4 +17,4 @@ class BooksApp extends React.Component {
   }
 }
 
-export default BooksApp
+export default App
