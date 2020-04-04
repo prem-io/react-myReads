@@ -1,4 +1,4 @@
-# MyReads Nanodegree Project - 01
+# MyReads: A Book Tracking App
 
 This is the final assessment project for Udacity's [React Fundamentals course](https://www.udacity.com/course/react-nanodegree--nd019?utm_source=gsem_brand&utm_medium=ads_r&utm_campaign=1971936383_c&utm_term=71052941455_in&utm_keyword=react%20nanodegree_e&gclid=CjwKCAjw4KD0BRBUEiwA7MFNTRd-nRYUumYFI7dQy2EssxO97Iwy7EN3w6Bc2uQOm-3_c1d3d7QJnxoCw_wQAvD_BwE).
 
@@ -63,7 +63,7 @@ To simplify your development process, we've provided a backend server for you to
 Method Signature:
 
 ```js
-getAll()
+getAll();
 ```
 
 - Returns a Promise which resolves to a JSON object containing a collection of book objects.
@@ -74,7 +74,7 @@ getAll()
 Method Signature:
 
 ```js
-update(book, shelf)
+update(book, shelf);
 ```
 
 - book: `<Object>` containing at minimum an `id` attribute
@@ -86,7 +86,7 @@ update(book, shelf)
 Method Signature:
 
 ```js
-search(query)
+search(query);
 ```
 
 - query: `<String>`
