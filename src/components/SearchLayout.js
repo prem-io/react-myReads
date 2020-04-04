@@ -3,13 +3,14 @@ import * as BooksAPI from '../BooksAPI'
 import sortBy from 'sort-by'
 import SearchBar from './SearchBar'
 import Book from './Book'
+import { debounce } from '../util'
 class SearchLayout extends Component {
   state = {
     searchBooks: [],
     resultsFound: false
   }
 
-  onSearch = (query) => {
+  onSearch = debounce((query) => {
     query
       ? BooksAPI.search(query)
         .then((books) => {
@@ -20,7 +21,7 @@ class SearchLayout extends Component {
           }
         })
       : this.setState({ searchBooks: [], resultsFound: false })
-  }
+  }, 1000)
 
   updateShelf = (book, shelf) => {
 
