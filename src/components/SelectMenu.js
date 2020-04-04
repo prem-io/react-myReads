@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 
 const SelectMenu = ({ shelf, book, updateShelf }) => {
@@ -13,13 +13,13 @@ const SelectMenu = ({ shelf, book, updateShelf }) => {
         <option value="none">None</option>
       </select>
     </div>
-  )
-}
+  );
+};
 
 SelectMenu.propTypes = {
   shelf: PropTypes.string.isRequired,
   book: PropTypes.object.isRequired,
   updateShelf: PropTypes.func.isRequired
-}
+};
 
-export default SelectMenu
+export default SelectMenu;

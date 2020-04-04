@@ -1,9 +1,9 @@
-import React from 'react'
-import SelectMenu from './SelectMenu'
-import PropTypes from 'prop-types'
+import React from 'react';
+import SelectMenu from './SelectMenu';
+import PropTypes from 'prop-types';
 
 const Book = ({ book, updateShelf }) => {
-  const { title, authors, imageLinks, shelf = 'none' } = book
+  const { title, authors, imageLinks, shelf = 'none' } = book;
 
   return (
     <div className="book">
@@ -20,20 +20,20 @@ const Book = ({ book, updateShelf }) => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
 const BookCover = ({ imageLinks }) => {
   return (
     <div className="book-cover"
       style={{ width: 128, height: 193, backgroundImage: `url(${imageLinks && imageLinks.thumbnail})` }}
     ></div>
-  )
-}
+  );
+};
 
 Book.propTypes = {
   book: PropTypes.object.isRequired,
   updateShelf: PropTypes.func.isRequired
-}
+};
 
-export default Book
+export default Book;

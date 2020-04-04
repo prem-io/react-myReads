@@ -1,10 +1,10 @@
-import React from 'react'
-import sortBy from 'sort-by'
-import PropTypes from 'prop-types'
-import Book from './Book'
+import React from 'react';
+import sortBy from 'sort-by';
+import PropTypes from 'prop-types';
+import Book from './Book';
 
 const Shelf = (props) => {
-  const { title, books, updateShelf } = props
+  const { title, books, updateShelf } = props;
 
   return (
     <div className="bookshelf">
@@ -19,13 +19,13 @@ const Shelf = (props) => {
         </ol>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Shelf.propTypes = {
   title: PropTypes.string.isRequired,
   books: PropTypes.array.isRequired,
   updateShelf: PropTypes.func.isRequired
-}
+};
 
-export default Shelf
+export default Shelf;

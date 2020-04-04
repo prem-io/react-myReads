@@ -1,7 +1,7 @@
-import React from 'react'
-import Shelf from './Shelf'
-import { Link } from 'react-router-dom'
-import Loader from './Loader'
+import React from 'react';
+import Shelf from './Shelf';
+import { Link } from 'react-router-dom';
+import Loader from './Loader';
 
 const ShelvesLayout = ({ books, updateShelf }) => {
 
@@ -9,7 +9,7 @@ const ShelvesLayout = ({ books, updateShelf }) => {
     { shelf: "currentlyReading", title: "Currently Reading" },
     { shelf: "wantToRead", title: "Want To Read" },
     { shelf: "read", title: "Read" }
-  ]
+  ];
 
   return (
     <div className="list-books">
@@ -28,7 +28,7 @@ const ShelvesLayout = ({ books, updateShelf }) => {
       }
       <Link to='/search' className="open-search" >Add a book</Link>
     </div>
-  )
-}
+  );
+};
 
-export default ShelvesLayout
+export default ShelvesLayout;
